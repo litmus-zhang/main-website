@@ -5,7 +5,7 @@ import SupportWidget from "../components/SupportWidget";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div>
+    <div className="font-sans bg-dark">
       <NavBar />
       <SupportWidget />
       <Component {...pageProps} />
