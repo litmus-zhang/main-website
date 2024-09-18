@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/default.astro';
+const heroImage = 'https://res.cloudinary.com/dk0pompea/image/upload/v1726645709/dynage/dynage-t-hero_z3zaxp.avif';
 const btns = [
 {
   class: 'border text-md px-3 py-2 rounded',
@@ -15,9 +16,9 @@ const btns = [
 ---
 
 <Layout title="Welcome to Dynage Technologies.">
-	<section class="mx-auto mt-8 px-10 h- flex gap-2 items-center">
+	<section class="mx-auto mt-8 px-10 lg:flex md:flex xs:flex-col gap-2 items-center">
 		<div class="flex flex-col gap-2 lg:w-1/2 sm:w-full">
-			<h1 class="text-5xl font-bold">Welcome to Dynage: Where Innovation Meets Engineering Excellence</h1>
+			<h1 class="text-5xl font-bold">Welcome to Dynage: Where <a class="text-sky-400">Innovation</a>  Meets <span class=" text-blue-800">Engineering Excellence</span> </h1>
 			<p class="font-light">Explore our cutting-edge services at Dynage Engineering and Dynage Studio.</p>
 			<ul class="flex gap-2 my-3">
 				{
@@ -30,26 +31,8 @@ const btns = [
 			</ul>
 		</div>
 		<div class="lg:w-1/2 sm:w-full overflow-hidden h- rounded">
-			<img src="https://demo-source.imgix.net/snowboard.jpg" alt="Hero image"/>
+			<img src={heroImage} alt="Hero image"/>
 		</div>
 	</section>
 </Layout>
-
-<style>
-	html, body {
-  height: 100%;
-  margin: 0;
-}
-
-.main-container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-footer {
-  margin-top: auto;
-}
-</style>
 

@@ -1,14 +1,21 @@
 ---
 import Layout from '../layouts/default.astro'
+const heroImage ="https://res.cloudinary.com/dk0pompea/image/upload/v1726645707/dynage/dynage-studio-hero_gvflys.png"
 
 ---
 
 <Layout title="Welcome to Dynage Studio.">
-    <main>
-        <h1 class="text-gradient">Dynage Studio</h1>
-        <p>
-            We are a team of engineers who are passionate about building software that solves real-world problems.
-        </p>
-    </main>
+    <section class="  mt-10 mx-auto px-10 mb-24 items-center lg:flex xs:flex-col gap-2">
+        <div class="my-2 lg:w-1/2 xs:w-full">
+     <button class="p-2 bg-sky-400 rounded font-bold ">
+                <a href="">Reach out</a>
+            </button>
+            <h1 class="text-4xl">Empowering Your Global Reach with Innovative Solutions</h1>
+            <p class="">A team of creatives who are passionate about building Software Solutions that solves real-world problems.</p>
+        </div>
+        <div class="overflow-hidden w-[400px] aspect-square">
+            <img src={heroImage} alt="Dynage studio hero image">
+        </div>
+    </section>
 
 </Layout>
