@@ -1,54 +1,52 @@
-# Astro Starter Kit: Basics
+# ✨ Kreatif Software
+**[Landing](https://kreatif-software.netlify.app/)**
+Kreatif is a high-performance Landing page made with Astro and Tailwind. It's based on the original Figma design by [Olga Skuja](https://www.olgaskuja.design/).
 
-```sh
-npm create astro@latest -- --template basics
-```
+## Features
+- Clean and simple design.
+- Fully Responsive.
+- Fast and efficient thanks to Astro.
+- Customizable with Tailwind.
+- Highly optimized SEO.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## ⚓ Lighthouse Score
+<p align="center">
+	<img width="600" alt="Lighthouse Score" src="https://raw.githubusercontent.com/vasquez-esteban/kreativ-software/master/lighthouse-score.svg"/>
+</p>
 
 ## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
 ```text
 /
 ├── public/
+│   └── fonts
 │   └── favicon.svg
+│   └── og.png
 ├── src/
 │   ├── components/
-│   │   └── Card.astro
+│   │   └── sections/
+│   │   └── seo/
+│   │   └── ui/
+│   ├── styles/
+│   ├── utils/
 │   ├── layouts/
-│   │   └── Layout.astro
+│   │   └── MainHead.astro
+│   │   └── MainLayout.astro
 │   └── pages/
 │       └── index.astro
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
 ## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
+To run locally:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| Comando          | Acción                                       |
+| :--------------- | :------------------------------------------- |
+| `git clone repo` | Clone Repo                          |
+| `cd repo`        | Access root dir                    |
+| `npm install`    | Install Deps                        |
+| `npm run dev`    | Run locally in `localhost:4321` |
 
-## 👀 Want to learn more?
+## More information
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- License & Credits in the Landig Page's footer.

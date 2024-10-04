@@ -1,38 +1,28 @@
 ---
-import Layout from '../layouts/default.astro';
-const heroImage = 'https://res.cloudinary.com/dk0pompea/image/upload/v1726645709/dynage/dynage-t-hero_z3zaxp.avif';
-const btns = [
-{
-  class: 'border text-md px-3 py-2 rounded',
-  href: '/dynage-engineering',
-  text: 'Dynage Engineering'
-},
-{
-  class: 'bg-black text-white px-3 py-2 rounded',
-  href: '/dynage-studio',
-  text: 'Dynage Studio'
-}
-]
+import Cases from "../components/sections/Cases.astro";
+import Contact from "../components/sections/Contact.astro";
+import Hero from "../components/sections/Hero.astro";
+import Process from "../components/sections/Process.astro";
+import Proposal from "../components/sections/Proposal.astro";
+import Services from "../components/sections/Services.astro";
+import Sponsors from "../components/sections/Sponsors.astro";
+import Team from "../components/sections/Team.astro";
+import Testimonials from "../components/sections/Testimonials.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/globals.css";
 ---
 
-<Layout title="Welcome to Dynage Technologies.">
-	<section class="mx-auto mt-8 px-10 lg:flex md:flex xs:flex-col gap-2 items-center">
-		<div class="flex flex-col gap-2 lg:w-1/2 sm:w-full">
-			<h1 class="text-5xl font-bold">Welcome to Dynage: Where <a class="text-sky-400">Innovation</a>  Meets <span class=" text-blue-800">Engineering Excellence</span> </h1>
-			<p class="font-light">Explore our cutting-edge services at Dynage Engineering and Dynage Studio.</p>
-			<ul class="flex gap-2 my-3">
-				{
-					btns.map(btn => (
-						<li>
-							<a class={btn.class} href={btn.href}>{btn.text}</a>
-						</li>
-					))
-				}
-			</ul>
-		</div>
-		<div class="lg:w-1/2 sm:w-full overflow-hidden h- rounded">
-			<img src={heroImage} alt="Hero image"/>
-		</div>
-	</section>
-</Layout>
-
+<MainLayout
+  title="Dynage Technologies"
+  description="A digital agency that helps you grow your business"
+>
+  <Hero />
+  <Sponsors />
+  <Services />
+  <Proposal />
+  <Cases />
+  <Process />
+  <Team />
+  <Testimonials />
+  <Contact />
+</MainLayout>
