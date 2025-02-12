@@ -3,3 +3,17 @@
 > research@1.0.0 build
 > astro check && astro build
 
+[33m[1m23:51:50[22m [WARN] [@astrojs/react][39m More than one JSX renderer is enabled. This will lead to unexpected behavior unless you set the `include` or `exclude` option. See https://docs.astro.build/en/guides/integrations-guide/react/#combining-multiple-jsx-frameworks for more information.
+[2m23:51:50[22m [34m[vite][39m Re-optimizing dependencies because vite config has changed
+[2m23:51:52[22m [34m[types][39m Generated [2m1.81s[22m
+[2m23:51:52[22m [34m[check][39m Getting diagnostics for Astro files in /Users/mac/Desktop/devprojects/frontend/main-website/research...
+[96msrc/components/BaseHead.astro[0m:[93m2[0m:[93m1[0m - [93mwarning[0m[90m ts(6133): [0m'ViewTransitions' is declared but its value is never read.
+
+[7m2[0m import { ViewTransitions } from "astro:transitions"
+[7m [0m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[1mResult (34 files): [22m
+[2m-[22m [1m[31m0 errors[39m[22m
+[2m-[22m [1m[33m0 warnings[39m[22m
+[2m-[22m [2m1 hint
+[22m

@@ -17,19 +17,22 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 
 const post = await getEntry('posts', Astro.params.slug)
-const author = await getEntry('authors', post.data.author.id);
-const { Content } = await post.render();
+let author;
+if (post) {
+    author = await getEntry('authors', post.data.author.id);
+}
+const postContent = await post?.render();
 ---
-<Layout title={post.data.title}>
+<Layout title={post?.data.title ?? "Dynage Engineering"}>
     <Header>
         <a class="absolute top-0 left-0 px-4 py-2.5 border-1 border-t-0 border-l-0 border-gray-200 dark:border-gray-800 hover:bg-gray-900 hover:c-gray-200 transition" href="/blog">Return to blog</a>
-        <h1 class="text-20 leading-20">{post.data.title}</h1>
-        {post.data.description ?? <p>{post.data.description}</p>}
-        <FormattedDate date={new Date(post.data.pubDate)} />
+        <h1 class="text-20 leading-20">{post?.data.title ?? "Post title"}</h1>
+        {post?.data.description ?? <p>{post?.data.description ?? "Post Description"}</p>}
+        <FormattedDate date={new Date(post?.data.pubDate ?? "2020-01-01" ) } />
     </Header>
     <main>
-        <Section source={`by ${author.data.name}`} fullWidthBorder class="content-wrapper">
-            <Content />
+        <Section source={`by ${author?.data.name}`} fullWidthBorder class="content-wrapper">
+            {postContent}
         </Section>
     </main>
 </Layout>

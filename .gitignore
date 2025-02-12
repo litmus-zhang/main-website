@@ -1,1 +1,8 @@
 node_modules
+.turbo/
+academy/.turbo
+**/**/*.log
+engineering/.turbo/turbo-build.log
+academy/.turbo/turbo-build.log
+general/.turbo/turbo-build.log
+research/.turbo/turbo-build.log
