@@ -1,0 +1,11 @@
+
+
+> research@1.0.0 lint
+> eslint .
+
+sh: eslint: command not found
+[37;40mnpm[0m [0m[31;40mERR![0m [0m[35mLifecycle script `lint` failed with error:[0m 
+[0m[37;40mnpm[0m [0m[31;40mERR![0m [0m[35mError: command failed[0m 
+[0m[37;40mnpm[0m [0m[31;40mERR![0m [0m[35m  in workspace: research@1.0.0[0m 
+[0m[37;40mnpm[0m [0m[31;40mERR![0m [0m[35m  at location: /Users/mac/Desktop/devprojects/frontend/main-website/research[0m 
+[0m

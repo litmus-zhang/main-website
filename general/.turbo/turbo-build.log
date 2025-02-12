@@ -1,0 +1,9 @@
+
+
+> general@0.0.1 build
+> astro check && astro build
+
+[31m[1m05:46:33[22m [ERROR] [vite][39m [31mWebSocket server error: Port is already in use[39m
+[2m05:46:33[22m [34m[vite][39m Re-optimizing dependencies because vite config has changed
+[2m05:46:33[22m Types generated [2m457ms[22m
+[2m05:46:33[22m [34m[check][39m Getting diagnostics for Astro files in /Users/mac/Desktop/devprojects/frontend/main-website/general...
