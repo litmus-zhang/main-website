@@ -1,0 +1,11 @@
+
+
+> academy@0.0.1 build
+> astro build
+
+[0m[2m05:46:33 AM [22m[1m[36m[content][39m[22m [0mNo content directory found. Skipping type generation.
+[0m[2m05:46:33 AM [22m[1m[36m[build][39m[22m [0moutput target: [32mserver[39m
+[0m[2m05:46:33 AM [22m[1m[36m[build][39m[22m [0mdeploy adapter: [32m@astrojs/netlify/functions[39m
+[0m[2m05:46:33 AM [22m[1m[36m[build][39m[22m [0mCollecting build info...
+[0m[2m05:46:33 AM [22m[1m[36m[build][39m[22m [0m[2mCompleted in 225ms.[22m
+[0m[2m05:46:33 AM [22m[1m[36m[build][39m[22m [0mBuilding server entrypoints...
