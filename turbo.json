@@ -1,9 +1,31 @@
 {
     "$schema": "https://turbo.build/schema.json",
+    "globalEnv": [
+      "STORYBLOK_PREVIEW_TOKEN",
+      "STORYBLOK_PERSONAL_TOKEN",
+      "STORYBLOK_SPACE_ID",
+      "STORYBLOK_REGION",
+      "LOCALE",
+      "SITE_LANG",
+      "CURRENCY",
+      "CONTACT_FORM_ENDPOINT",
+      "MAILGUN_API_KEY",
+      "MAILGUN_DOMAIN",
+      "MAILGUN_API_URL",
+      "FROM_EMAIL_ADDRESS",
+      "POSTMARK_SERVER_TOKEN",
+      "SLACK_TOKEN",
+      "NEWSLETTER_ENDPOINT",
+      "MAILCHIMP_API_KEY",
+      "MAILCHIMP_SERVER_PREFIX",
+      "MAILCHIMP_LIST_ID"
+    ],
     "tasks": {
       "build": {
         "dependsOn": ["^build"],
-        "outputs": ["dist/**"]
+        "outputs": ["dist/**"],
+        "env": ["STORYBLOK_PREVIEW_TOKEN", "STORYBLOK_PERSONAL_TOKEN", "STORYBLOK_SPACE_ID", "STORYBLOK_REGION", "LOCALE", "SITE_LANG", "CURRENCY", "CONTACT_FORM_ENDPOINT", "MAILGUN_API_KEY", "MAILGUN_DOMAIN", "MAILGUN_API_URL", "FROM_EMAIL_ADDRESS", "POSTMARK_SERVER_TOKEN", "SLACK_TOKEN", "NEWSLETTER_ENDPOINT", "MAILCHIMP_API_KEY", "MAILCHIMP_SERVER_PREFIX", "MAILCHIMP_LIST_ID"]
+
       },
 
       "dev": {
@@ -22,4 +44,5 @@
         "dependsOn": ["^lint"]
       }
     }
+   
   }
