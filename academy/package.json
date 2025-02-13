@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "@astrojs/netlify": "^2.3.0",
-    "astro": "^2.7.2"
+    "@astrojs/vercel": "^8.0.7",
+    "astro": "5.0.0"
   },
   "devDependencies": {
     "sass": "^1.63.6"
