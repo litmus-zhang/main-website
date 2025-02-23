@@ -54,6 +54,20 @@ const authors = defineCollection({
         profilePicture: z.optional(z.string())
     })
 })
+const products = defineCollection({
+    type: 'data',
+    schema: z.array(
+        z.object({
+            name: z.string(),
+            unitPrice: z.number(),
+            description: z.string(),
+            image: z.string(),
+            quantity: z.number(),
+            producKey: z.any(),
+        })
+    )
+
+})
 
 /**
  * Want to use the content layer?
@@ -77,5 +91,6 @@ export const collections = {
     stats,
     investors,
     posts,
-    authors
+    authors,
+    products,
 }
