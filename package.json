@@ -8,7 +8,8 @@
     "academy",
     "engineering",
     "research",
-    "studio"
+    "studio",
+    "finance"
   ],
   "scripts": {
     "build": "turbo run build",
