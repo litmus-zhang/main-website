@@ -1,8 +1,8 @@
 [
     {
-        "value":41,
+        "value":10,
         "unit": "M+",
-        "title":"Weekly NPM Downloads"
+        "title":"Projects"
     },
     {
         "value":40.6,
@@ -11,9 +11,9 @@
         "title": "Total GitHub Stars"
     },
     {
-        "value":6.2,
+        "value":1.2,
         "by":0.31,
         "unit":"M+",
-        "title":"Projects Use Our Stuff"
+        "title":"Developers Use Our Stuff"
     }
 ]

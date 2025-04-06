@@ -1,60 +1,30 @@
 [
     {
+    "name": "Coderina Edtech",
+    "type": "major",
+    "logo": "string",
+    "subtitle": "Coderina Edtech"
+    },
+    {
+        "name": "Ecopulse",
         "type": "major",
-        "name":"Major Investor 1"
+        "logo": "string",
+        "subtitle": "Ecopulse Technologies"
     },
     {
-        "type":"major",
-        "name":"Major Investor 2"
-    },
-    {
-        "type":"minor",
-        "name":"Minor Investor",
-        "subtitle":"Company Name"
-    },
-    {
-        "type":"minor",
-        "name":"Minor Investor",
-        "subtitle":"Company Name"
+        "name": "Thynkcity",
+        "type": "major",
+        "logo": "string",
+        "subtitle": "Coderina Edtech"
     },
     {
         "type":"minor",
-        "name":"Minor Investor",
-        "subtitle":"Company Name"
+        "name":"Nivara Designs",
+        "subtitle":"Nivara Designs"
     },
     {
         "type":"minor",
-        "name":"Minor Investor",
-        "subtitle":"Company Name"
-    },
-    {
-        "type":"minor",
-        "name":"Minor Investor",
-        "subtitle":"Company Name"
-    },
-    {
-        "type":"minor",
-        "name":"Minor Investor",
-        "subtitle":"Company Name"
-    },
-    {
-        "type":"minor",
-        "name":"Minor Investor",
-        "subtitle":"Company Name"
-    },
-    {
-        "type":"minor",
-        "name":"Minor Investor",
-        "subtitle":"Company Name"
-    },
-    {
-        "type":"minor",
-        "name":"Minor Investor",
-        "subtitle":"Company Name"
-    },
-    {
-        "type":"minor",
-        "name":"Minor Investor",
-        "subtitle":"Company Name"
+        "name":"Standout Interiors Designs",
+        "subtitle":"Standout Interiors Designs"
     }
 ]
