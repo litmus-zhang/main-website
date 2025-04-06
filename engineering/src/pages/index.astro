@@ -10,6 +10,14 @@ import StatsGrid from '../components/StatsGrid.astro';
 import InvestorGrid from '../components/InvestorGrid.astro';
 
 const projects = await getCollection('projects');
+import { ghostClient } from '../lib/ghost';
+const posts = await ghostClient.posts
+    .browse({
+        limit: 'all',
+    })
+    .catch((err) => {
+        console.error(err);
+    });
 ---
 
 <Layout title="Welcome to Dynage Engineering.">
