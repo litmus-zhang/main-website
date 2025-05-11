@@ -7,4 +7,4 @@ academy/.turbo/turbo-build.log
 general/.turbo/turbo-build.log
 research/.turbo/turbo-build.log
 venv
-.DS_Store
+**/**/.DS_Store
