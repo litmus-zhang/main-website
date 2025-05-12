@@ -35,7 +35,6 @@ function prepareOrderData(
         metadata: {
             parent_order_id: parentOrder.id,
         },
-        // use info from parent
         region_id: parentOrder.region_id,
         customer_id: parentOrder.customer_id,
         sales_channel_id: parentOrder.sales_channel_id,
@@ -43,23 +42,19 @@ function prepareOrderData(
         currency_code: parentOrder.currency_code,
         shipping_address_id: parentOrder.shipping_address?.id,
         billing_address_id: parentOrder.billing_address?.id,
-        // A better solution would be to have shipping methods for each
-        // item/vendor. This requires changes in the storefront to commodate that
-        // and passing the item/vendor ID in the `data` property, for example.
-        // For simplicity here we just use the same shipping method.
-        shipping_methods: parentOrder.shipping_methods.map((shippingMethod) => ({
+        shipping_methods: (parentOrder.shipping_methods ?? []).map((shippingMethod) => ({
             name: shippingMethod.name,
             amount: shippingMethod.amount,
             shipping_option_id: shippingMethod.shipping_option_id,
             data: shippingMethod.data,
-            tax_lines: shippingMethod.tax_lines.map((taxLine) => ({
+            tax_lines: (shippingMethod.tax_lines ?? []).map((taxLine) => ({
                 code: taxLine.code,
                 rate: taxLine.rate,
                 provider_id: taxLine.provider_id,
                 tax_rate_id: taxLine.tax_rate_id,
                 description: taxLine.description,
             })),
-            adjustments: shippingMethod.adjustments.map((adjustment) => ({
+            adjustments: (shippingMethod.adjustments ?? []).map((adjustment) => ({
                 code: adjustment.code,
                 amount: adjustment.amount,
                 description: adjustment.description,
@@ -151,8 +146,8 @@ const createVendorOrdersStep = createStep(
             created_orders: createdOrders,
         })
     },
-    async ({ created_orders }, { container, context }) => {
-        await Promise.all(created_orders.map((createdOrder) => {
+    async (all_orders , { container, context }) => {
+        await Promise.all((all_orders?.created_orders ?? []).map((createdOrder) => {
             return cancelOrderWorkflow(container).run({
                 input: {
                     order_id: createdOrder.id,
