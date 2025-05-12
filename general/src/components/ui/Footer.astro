@@ -1,24 +1,11 @@
 ---
 import { Image } from "astro:assets";
-import Facebook from "../../assets/facebook.svg";
-import Linkedin from "../../assets/linkedin.svg";
+import {navLinks as links, logos} from "../data/content.ts"
+
 import Logo from "../../assets/dynage-logo-1.svg";
-import Twitter from "../../assets/twitter.svg";
 import ShortForm from "../ui/ShortForm.astro";
 
-const logos = [
-  { name: "Facebook", src: Facebook, link: "https://facebook.com/dynage" },
-  { name: "Linkedin", src: Linkedin, link: "https://linkedin.com/company/dynage" },
-  { name: "Twitter", src: Twitter, link: "https://twitter.com/_dynage" },
-];
 
-const links = [
-  { name: "About us", href: "#about" },
-  { name: "Services", href: "#services" },
-  { name: "Use Cases", href: "#cases" },
-  { name: "Pricing", href: "#Testimonials" },
-  { name: "Blog", href: "#Home" },
-];
 ---
 
 <section class="sm:px-5">
@@ -71,7 +58,7 @@ const links = [
           >
             <h3 class="mb-5">Contact us:</h3>
             <div class="flex flex-col justify-between gap-4">
-              <span> Email: hello@dynage.technology </span>
+              <span> Email: <a href="mailto:hello@dynage.technology"> hello@dynage.technology </a> </span>
             </div>
           </div>
           <div class="flex-grow my-10 lg:my-0 lg:ml-12">
@@ -87,6 +74,15 @@ const links = [
         <span
           >{new Date().getFullYear()} &copysr; Dynage Technologies </span
         >
+        <span class="hidden lg:flex">
+          <a href="#privacy" class="underline">Privacy Policy</a>
+        </span>
+        <span class="hidden lg:flex">
+          <a href="#terms" class="underline">Terms of Service</a>
+        </span>
+        <span class="hidden lg:flex">
+          <a href="#cookies" class="underline">Cookies Policy</a>
+        </span>
       </div>
     </div>
   </div>
