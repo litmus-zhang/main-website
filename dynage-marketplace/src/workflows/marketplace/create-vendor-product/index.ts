@@ -35,11 +35,13 @@ const createVendorProductWorkflow = createWorkflow(
             return {
                 products: [{
                     ...data.input.product,
-                    sales_channels: [
-                        {
-                            id: data.stores[0].default_sales_channel_id,
-                        },
-                    ],
+                    sales_channels: data.stores[0].default_sales_channel_id
+                        ? [
+                            {
+                                id: data.stores[0].default_sales_channel_id as string,
+                            },
+                        ]
+                        : [],
                 }],
             }
         })
