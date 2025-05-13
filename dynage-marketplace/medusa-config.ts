@@ -6,6 +6,14 @@ loadEnv(process.env.NODE_ENV || 'development', process.cwd())
 module.exports = defineConfig({
   projectConfig: {
     databaseUrl: process.env.DATABASE_URL,
+    databaseDriverOptions: {
+      connection: {
+        ssl: {
+          rejectUnauthorized: false,
+        }
+      }
+    },
+
     redisUrl: process.env.REDIS_URL,
 
     http: {
@@ -16,7 +24,9 @@ module.exports = defineConfig({
       cookieSecret: process.env.COOKIE_SECRET || "supersecret",
     },
     workerMode: process.env.MEDUSA_WORKER_MODE as "shared" | "worker" | "server",
+
   },
+
   modules: [
     {
       resolve: "./src/modules/marketplace",
