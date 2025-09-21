@@ -122,10 +122,7 @@ export default defineConfig({
       https: true,
     },
   },
-  experimental: { 
-    
-    
-  },
+  experimental: { },
   env: {
     schema: {
       STORYBLOK_PREVIEW_TOKEN: envField.string({
