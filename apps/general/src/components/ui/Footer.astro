@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import {navLinks as links, logos} from "../data/content.ts"
+import {navLinks as links, logos} from "../../data/content.ts"
 
 import Logo from "../../assets/dynage-logo-1.svg";
 import ShortForm from "../ui/ShortForm.astro";
@@ -24,7 +24,7 @@ import ShortForm from "../ui/ShortForm.astro";
           </picture>
           <ul class="flex flex-col sm:flex-row gap-5">
             {
-              links.map((link) => {
+              links.map((link: any) => {
                 return (
                   <li class="text-center">
                     <a class="underline" href={link.href}>
@@ -37,7 +37,7 @@ import ShortForm from "../ui/ShortForm.astro";
           </ul>
           <ul class="flex gap-5">
             {
-              logos.map((logo) => {
+              logos.map((logo: any) => {
                 return (
                   <li>
                     <a href={logo.link} target="_blank">
