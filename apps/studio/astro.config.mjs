@@ -19,7 +19,6 @@ export default defineConfig({
   integrations: [
     storyblok({
       accessToken: env.STORYBLOK_PREVIEW_TOKEN,
-      // bridge: false,
       components: {
         page: "components/bloks/Page",
         post: "components/bloks/Post",
