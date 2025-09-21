@@ -1,6 +1,7 @@
 ---
 import { storyblokEditable } from "@storyblok/astro";
 import Upgrade from "./Upgrade.astro";
+import Accordion from "@components/ui/accordion"
 
 interface Props {
   blok: AccordionStoryblok;
@@ -21,7 +22,8 @@ const {
     <div
       class={`${container} ${align} ${padding_top} ${padding_bottom} scale-in grid h-fit w-full grid-cols-1 gap-8 `}
     >
-      <Upgrade />
+      <!-- <Accordion lang="en" /> -->
+       <Upgrade />
     </div>
   </div>
 </div>
