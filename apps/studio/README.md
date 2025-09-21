@@ -2,7 +2,7 @@
 
 [![License: CC BY-ND 4.0](https://img.shields.io/badge/License-CC_BY--ND_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nd/4.0/)
 
-### 👉 [Demo & Docs](https://Dynage-Studio.unfolding.io/)
+### 👉 [Demo & Docs](https://studio.dynage.technology/)
 
 ## 📝 1. Setting up the .env file
 
@@ -40,15 +40,16 @@ open `https://localhost:4321/setup`
 And sync your Datasources, Components, and stories. it is best to first delete before syncing. 
 _if a sync or delete fails, try to refresh the page ant try again._
 
-![Dynage Studio](https://Dynage Studio.unfolding.io/screenshots/sync.png)
+![Dynage Studio](https://studio.dynage.technology/o/screenshots/sync.png)
 
 ### ⚙️ 5. Add your site to the astro.config and set your adapter (vercel or netlify)
 
 
 ```javascript
-
+import { defineConfig } from 'astro/config';
+import vercel from '@astrojs/vercel/serverless';
 export default defineConfig({
-	site: 'https://your-website.com',
+	site: 'https://studio.dynage.technology',
 	output: "hybrid",
   	adapter: vercel(), // vercel() or netlify()
 

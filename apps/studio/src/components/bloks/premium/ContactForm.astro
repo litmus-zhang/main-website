@@ -1,8 +1,11 @@
 ---
 import {
   storyblokEditable, 
+  renderRichText,
 } from "@storyblok/astro";
 import Upgrade from "./Upgrade.astro";
+import  ContactFormVue from "@/components/forms/ContactFormVue.vue";
+
  
 
 interface Props {
@@ -10,6 +13,7 @@ interface Props {
 } 
 const { blok } = Astro.props;
 const { 
+  content,
   container ,
   surface = "", 
   padding_top = "pt-lg",
@@ -17,13 +21,14 @@ const {
 } = blok;
  
  
- 
+ const renderedRichText = renderRichText(content);
 ---
 
 <div {...storyblokEditable(blok)} class={`${surface} intersection`}>
   <div class={container ? "content-grid" : ""}>
     <div class={`${container} ${padding_top} ${padding_bottom} px-1` }>
-       <Upgrade />
+            <div set:html={renderedRichText} class={`richtext max-w-2xl text-balance`} />
+            <ContactFormVue  client:load/>
     </div>
   </div>
 </div>

@@ -4,12 +4,7 @@
   "packageManager": "npm@10.2.4",
   "private": true,
   "workspaces": [
-    "general",
-    "academy",
-    "engineering",
-    "research",
-    "studio",
-    "finance"
+    "apps/*"
   ],
   "scripts": {
     "build": "turbo run build",
