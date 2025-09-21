@@ -1,6 +1,5 @@
 ---
 import { storyblokEditable } from "@storyblok/astro"; 
-import Upgrade from "./Upgrade.astro";
 import  NewsletterVue from "@/components/forms/NewsletterForm.vue";
 
 
@@ -23,7 +22,7 @@ const {
 >
   <div class={container && "content-grid"}  >
     <div class={container}>
-    <NewsletterVue client:load />
+    <NewsletterVue lang="en" client:load />
     </div>
   </div>
 </div>
